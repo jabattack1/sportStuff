@@ -1,0 +1,163 @@
+
+body {
+  font-family: Courier;
+}
+
+.likes-heart{
+  opacity: 0;
+  transition: all 0.5s; 
+  transform: offsets scale(5); 
+  display: block;
+}
+.like-enter{
+  transition: all .2s;
+  transform: offsets scale(1);
+  opacity: 1;
+}
+.like-enter-active{
+  transform: offsets scale(5);
+}
+.like-leave-active{
+  display: none;
+}
+
+.headLine{
+	width:400px;
+	margin: 0 auto;
+	text-align: center;
+    display: block;
+    text-decoration: none;
+    color:black;
+}
+
+.disclosure{
+	width:1200px;
+	margin: 0 auto;
+	text-align: center;
+    display: block;
+    font-size:20px;
+    word-wrap: break-word;
+}
+
+.cards-grid{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  /*background-color: black;*/
+}
+
+.grid-figure{
+  flex-basis:calc(15% - 4rem);
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0 2rem 2rem 2rem;
+  padding: 2rem;
+  border: 2px solid black;
+  background: #e2e2e2;
+  /*box-shadow: 0 0 0 5px rgba(0,0,0,0.03);*/
+  position: relative;
+  max-width:200px;
+}
+
+.grid-figure-wrap{
+	width: calc(100%);
+	/*background-color: black;*/
+	/*display: table;*/
+}
+
+.grid-card{
+  width: calc(100%);
+  margin-top:20px;
+/*  margin-left: -2rem;
+  margin-top: -2rem;*/
+  /*display: inline-flex;*/
+  /*display: table-row;*/
+/*  width: 200px;
+  height:320px;*/
+}
+
+.rank{
+	margin: 0 auto;
+	text-align: center;
+    display: block;	
+}
+
+.caption{
+	margin: 0 auto;
+	text-align: center;
+    display: block;
+}
+
+.description{
+	margin: 0 auto;
+	text-align: center;
+    display: block;	
+}
+
+.likes{
+	margin: 0 auto;
+	text-align: center;
+    display: block;
+    margin-top:20px;
+}
+
+.likes:hover{
+	cursor:pointer;
+}
+
+.single-card{
+  /*@extend .grid-figure*/
+  max-width: 900px;
+  /*height:200px;*/
+  margin: 0 auto;
+  display: flex;
+}
+
+.likes-heart{
+  background: url(http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png) center no-repeat;
+  background-size: contain;
+  font-size: 2rem;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  left: 40%;
+  top: 40%;
+  pointer-events: none;
+}
+
+
+.remove-comment{
+  background: none;
+  border: 0;
+  line-height: 1;
+  opacity: 0;
+  font-size:20px;
+}
+
+.comment:hover > p > .remove-comment{
+	color: red;
+	opacity: 1;
+	cursor:pointer;
+}
+
+
+.comment{
+  border-bottom: 1px solid lightgrey;
+  padding: 0.5rem 0;
+	font-size: 1.2rem;
+    margin: 0;
+    color: blue;
+    margin-right: 5px;
+}
+ 
+.comment-form > input {
+    width: 100%;
+    border: 0;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+    resize: vertical;
+}
+

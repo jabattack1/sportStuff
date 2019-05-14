@@ -1,12 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {render} from 'react-dom';
+
+import css from './client/styles/style.css';
+import App from './client/components/App.js';
+import Single from './client/components/Single.js';
+import CardsGrid from './client/components/CardsGrid.js';
+
+import { ConnectedRouter } from 'react-router-redux'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+import {Provider} from 'react-redux';
+import store, {history} from './client/store';
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+const router = (
+	<Provider store={store}>
+		<BrowserRouter>
+			<App>
+				<Switch>
+					<Route exact path='/' component={CardsGrid} />
+					<Route path='/view/:postId' component={Single}></Route>
+				</Switch>
+			</App>
+		</BrowserRouter>
+	</Provider>
+)
+
+
+render(router, document.getElementById('root'));
+
 serviceWorker.unregister();
