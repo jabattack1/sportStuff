@@ -2,7 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Card from './Card.js';
 
-class CardsGrid extends React.Component{
+var createReactClass = require('create-react-class');
+
+
+
+const CardsGrid = createReactClass({
 	render(){
 		return(
 			<div className='cards-grid'>
@@ -10,6 +14,6 @@ class CardsGrid extends React.Component{
 			</div>
 		)
 	}
-}
+});
 
 export default CardsGrid;

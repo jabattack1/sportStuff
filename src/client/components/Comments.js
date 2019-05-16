@@ -1,7 +1,8 @@
 import React from 'react';
 
+var createReactClass = require('create-react-class');
 
-class Comments extends React.Component{
+const Comments = createReactClass({
 	renderComment(comment, i){
 		return(
 			<div className='comment' key={i}>
@@ -12,7 +13,7 @@ class Comments extends React.Component{
 				</p>
 			</div>
 		)
-	}
+	},
 	handleSubmit(event){
 		//prevent page from refreshing
 		event.preventDefault();
@@ -23,7 +24,7 @@ class Comments extends React.Component{
 		// console.log(postId, author, comment);
 		this.props.addComment(postId, author, comment);
 		this.refs.commentForm.reset();
-	}
+	},
 	render(){
 		return(
 			<div className='comments'>
@@ -37,7 +38,7 @@ class Comments extends React.Component{
 		)
 	}
 // }
-};
+});
 
 
 export default Comments;

@@ -2,9 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
+var createReactClass = require('create-react-class');
 
 
-class Card extends React.Component{
+const Card = createReactClass({
 	render(){
 		const {post, i, comments} = this.props;
 
@@ -33,6 +34,6 @@ class Card extends React.Component{
 		)
 	}
 
-}
+});
 
 export default Card;

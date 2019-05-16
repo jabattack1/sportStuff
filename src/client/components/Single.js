@@ -3,7 +3,10 @@ import {Link} from 'react-router-dom';
 import Card from './Card.js';
 import Comments from './Comments.js'
 
-class Single extends React.Component{
+var createReactClass = require('create-react-class');
+
+
+const Single = createReactClass({
 	render(){
 		console.log(this.props)
 		//index of the post
@@ -23,6 +26,6 @@ class Single extends React.Component{
 			</div>
 		)
 	}
-}
+});
 
 export default Single;
